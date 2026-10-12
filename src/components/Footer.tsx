@@ -10,7 +10,7 @@ const links = {
   'Sumber Daya': [
     { label: 'Dokumentasi', href: '#' },
     { label: 'Tutorial', href: '#' },
-    { label: 'Kebijakan Privasi', href: '#' },
+    { label: 'Kebijakan Privasi', href: '#privacy' },
     { label: 'Syarat Layanan', href: '#' },
   ],
   Kontak: [

@@ -1,4 +1,4 @@
-import { Zap, Github, Twitter, Instagram, Mail } from 'lucide-react';
+import { Zap, Github, Twitter, Instagram, Mail, MessageCircle } from 'lucide-react';
 
 const links = {
   Produk: [
@@ -14,18 +14,18 @@ const links = {
     { label: 'Syarat Layanan', href: '#' },
   ],
   Kontak: [
-    { label: 'Email', href: '#' },
-    { label: 'WhatsApp', href: '#' },
+    { label: 'Email', href: 'mailto:officialgadgeton@gmail.com' },
+    { label: 'WhatsApp', href: 'https://wa.me/6287736000922' },
     { label: 'Komunitas', href: '#' },
     { label: 'Bantuan', href: '#' },
   ],
 };
 
 const socials = [
-  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Github, href: 'https://github.com/officialgadgeton-droid', label: 'GitHub' },
   { icon: Twitter, href: '#', label: 'Twitter' },
   { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Mail, href: '#', label: 'Email' },
+  { icon: Mail, href: 'mailto:officialgadgeton@gmail.com', label: 'Email' },
 ];
 
 export default function Footer() {
@@ -61,6 +61,8 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target={s.href.startsWith('http') ? '_blank' : undefined}
+                  rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={s.label}
                   className="flex items-center justify-center w-9 h-9 rounded-xl bg-gray-800 hover:bg-indigo-600 text-gray-400 hover:text-white transition-all hover:scale-105"
                 >
@@ -79,9 +81,13 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-sm text-gray-400 hover:text-indigo-400 transition-colors inline-flex items-center gap-1.5"
                     >
-                      {link.label}
+                      {link.label === 'WhatsApp' && <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />}
+                      {link.label === 'Email' && <Mail className="w-3.5 h-3.5 text-indigo-400" />}
+                      <span>{link.label}</span>
                     </a>
                   </li>
                 ))}

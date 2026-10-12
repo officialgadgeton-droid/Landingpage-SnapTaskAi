@@ -17,7 +17,7 @@ const links = {
     { label: 'Email', href: 'mailto:officialgadgeton@gmail.com' },
     { label: 'WhatsApp', href: 'https://wa.me/6287736000922' },
     { label: 'Komunitas', href: '#' },
-    { label: 'Bantuan', href: '#' },
+    { label: 'Bantuan', href: '#help' },
   ],
 };
 

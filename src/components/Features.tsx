@@ -12,7 +12,7 @@ const features = [
     border: 'border-emerald-200 dark:border-emerald-800/50',
     text: 'text-emerald-600 dark:text-emerald-400',
     points: ['Deteksi E-number additive', 'Cek gelatin & enzyme', 'Status halal kritis'],
-    image: 'https://images.pexels.com/photos/5418661/pexels-photo-5418661.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/halal-snack.jpg',
   },
   {
     icon: ChefHat,

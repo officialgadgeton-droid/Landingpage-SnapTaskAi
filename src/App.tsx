@@ -7,21 +7,26 @@ import HowItWorks from '@/components/HowItWorks';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
+import TermsOfService from '@/components/TermsOfService';
 
 export default function App() {
-  const [isPrivacy, setIsPrivacy] = useState(window.location.hash === '#privacy');
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
 
   useEffect(() => {
     const handleHashChange = () => {
-      setIsPrivacy(window.location.hash === '#privacy');
+      setCurrentHash(window.location.hash);
     };
 
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  if (isPrivacy) {
+  if (currentHash === '#privacy') {
     return <PrivacyPolicy onBack={() => { window.location.hash = ''; }} />;
+  }
+
+  if (currentHash === '#terms') {
+    return <TermsOfService onBack={() => { window.location.hash = ''; }} />;
   }
 
   return (

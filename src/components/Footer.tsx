@@ -11,7 +11,7 @@ const links = {
     { label: 'Dokumentasi', href: '#' },
     { label: 'Tutorial', href: '#' },
     { label: 'Kebijakan Privasi', href: '#privacy' },
-    { label: 'Syarat Layanan', href: '#' },
+    { label: 'Syarat Layanan', href: '#terms' },
   ],
   Kontak: [
     { label: 'Email', href: 'mailto:officialgadgeton@gmail.com' },

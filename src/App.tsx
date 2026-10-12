@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
 import TermsOfService from '@/components/TermsOfService';
+import HelpCenter from '@/components/HelpCenter';
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -27,6 +28,10 @@ export default function App() {
 
   if (currentHash === '#terms') {
     return <TermsOfService onBack={() => { window.location.hash = ''; }} />;
+  }
+
+  if (currentHash === '#help') {
+    return <HelpCenter onBack={() => { window.location.hash = ''; }} />;
   }
 
   return (
